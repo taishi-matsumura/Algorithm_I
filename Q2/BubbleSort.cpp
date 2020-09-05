@@ -12,9 +12,10 @@ int main() {
 	int arraySize = sizeof(array) / sizeof(int);
 
 	printf("ソート前の状態\n");
+	BubbleSort(array, arraySize);
 	PrintArray(array, arraySize);
 
-	BubbleSort(array, arraySize);
+	
 }
 
 /// <summary>
@@ -23,6 +24,16 @@ int main() {
 /// <param name="data">ソート対象の配列</param>
 /// <param name="size">配列の要素数</param>
 void BubbleSort(int data[], int size) {
+	for (int i = 0; i < (size - 1); i++)
+	{
+		for (int j = (size - 1); j > i; j--)
+		{
+			if (data[j] < data[j - 1])
+			{
+				Swap(data, j, j - 1);
+			}
+		}
+	}
 }
 
 /// <summary>
