@@ -29,6 +29,7 @@ void Sort(int data[], int arraySize) {
 }
 
 int main() {
+
 	int array[] = { 3,1,5,4,2 };
 
 	Sort(array, sizeof(array) / sizeof(int));

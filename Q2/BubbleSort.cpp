@@ -6,7 +6,7 @@ void PrintArray(int data[], int size);
 
 // メイン関数
 int main() {
-	int data[] = { 5, 4, 3, 2, 1 };
+	int data[] = { 9,2,4,1,3 };
 
 	printf("ソート前の状態：");
 	PrintArray(data, 5);
@@ -14,16 +14,13 @@ int main() {
 	printf("\nソート開始\n");
 
 	for (int i = 0; i <= 4; i++) {
-		int temp = data[i];
-		if (data[i - 1] > temp) {
-			int j = i;
-			do {
-				data[j] = data[j - 1];
-				j = j - 1;
-			} while (j > 0 && data[j - 1] > temp);
-			data[j] = temp;
+		for (int j = i + 1; j <= 4; j++) {
+			int temp = data[i];
+			if (temp > data[j]) {
+				data[i] = data[j];
+				data[j] = temp;
+			}
 		}
-
 		PrintArray(data, 5);
 	}
 }
