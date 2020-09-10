@@ -11,7 +11,14 @@ const int ElementNumberMIN = 0;		//要素番号の最初は確定で０、かつ
 // メイン関数
 int main() {
 	int data[] = { 5, 3, 1, 8, 2, 9, 4, 6, 7 };
-	int ArraySize = sizeof(data) / sizeof(int);		//要素数＝要素/要素１つ当たりの長さ（のイメージ）
+	int ArraySize = sizeof(data) / sizeof(int);			//
+	//要素数＝配列のメモリサイズ/int型のメモリサイズ(byte:4)
+	//	size_t ArraySize = sizeof(data) / sizeof(int);
+	//で進めようかと考えたけれど、BubbleSort内でsignedとunsignedの比較で警告が出たので安定を取ってint型に
+	//↓参考
+	//ttps://qiita.com/yohhoy/items/a2ab2900a2bd36c31879
+	//ttps://www.sejuku.net/blog/24793
+
 
 	printf("ソート前の状態\n");
 	PrintArray(data, ArraySize);
