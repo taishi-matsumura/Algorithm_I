@@ -12,10 +12,11 @@ int main() {
 	int arraySize = sizeof(array) / sizeof(int);
 
 	printf("ソート前の状態\n");
-	BubbleSort(array, arraySize);
 	PrintArray(array, arraySize);
 
-	
+	printf("ソート後の状態\n");
+	BubbleSort(array, arraySize);
+	PrintArray(array, arraySize);
 }
 
 /// <summary>
