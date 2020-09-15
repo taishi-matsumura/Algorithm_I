@@ -50,10 +50,10 @@ void BubbleSort(int data[], int size)
 {
 	int i, j;
 
-	for (i = 0; i <= size - 1; i++)
+	for (i = 0; i < size - 1; i++)
 	{
 		count++;
-		for (j = size - 1; j >= i + 1; j--)
+		for (j = size - 1; j > i; j--)
 		{
 			if (data[j] < data[j - 1])
 			{
